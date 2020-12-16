@@ -2,12 +2,9 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value,
+    value: this.props.value
   };
 
-  product = {
-    id: 1,
-  };
   // using an arrow function inherits this instead of creating a new one
   handleIncrement = () => {
     // telling react that the state of this componenet will change
