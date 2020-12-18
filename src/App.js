@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './components/navbar'
 import './App.css';
 import Counters from "./components/counters";
+import { isCompositeComponent } from 'react-dom/test-utils';
 
 class App extends Component {
   state = {
@@ -12,6 +13,16 @@ class App extends Component {
       { id: 4, value: 0 },
     ],
   };
+
+  constructor() {
+    super();
+    console.log('App - Constructor');
+  }
+
+  // Make ajax calls to get data from the server
+  componentDidMount() {
+    console.log('App - Mounted');
+  }
 
   // handler for when the increment button on the counter is clicked
   handleIncrement = counter => {
@@ -42,6 +53,7 @@ class App extends Component {
   };
 
   render() {
+    console.log('App - Rendered');
     return (
       <React.Fragment>
         <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}/>

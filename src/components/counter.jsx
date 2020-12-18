@@ -1,7 +1,21 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
+  // this method can decide whether an ajax call should be made to get new data based on props and state objects
+  componentDidUpdate(prevProps, prevState) {
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      // Ajax call and get new data
+    }
+  }
+  // opportunity to do any clean up before componenet is removed from the DOM - otherwise will end up with memory leaks
+  componentWillUnmount() {
+    console.log('Counter - Unmount');
+  }
+
   render() {
+    console.log('Counter = Rendered');
     return (
       <div>
         <span
