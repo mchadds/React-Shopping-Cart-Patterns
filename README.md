@@ -7,3 +7,9 @@ This project implements real world shopping cart patterns including
 - Removing item type from cart
 - Resetting items count in cart 
 - Counting the number of different types of items within the cart
+
+![Screenshot](images/'Base state cart.png')
+
+## Tools
+- [React](https://reactjs.org/) Frontend
+- [Node.js](https://nodejs.org/en/) JavaScript runtime environment
