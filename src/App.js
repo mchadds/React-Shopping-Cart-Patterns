@@ -67,11 +67,20 @@ class App extends Component {
     this.setState({ counters })
   };
 
+  totalCartItems = () => {
+    // "..." is the spread operator that clones the object
+    const counters = [...this.state.counters];
+    let i = 0;
+    counters.forEach(c => i+= c.value);
+    return i;
+  }
+
   render() {
     console.log('App - Rendered');
     return (
       <React.Fragment>
-        <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}/>
+        <NavBar totalCounters={this.totalCartItems()}/>
+          
         <main className="container" style={{ float: "left" }}>
           <Counters 
             counters={this.state.counters}
