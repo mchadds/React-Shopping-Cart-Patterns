@@ -37,6 +37,21 @@ class App extends Component {
     this.setState({ counters });
   };
 
+  // handler for when the decrement button on the counter is clicked
+  handleDecrement = counter => {
+    // "..." is the spread operator that clones the object
+    const counters = [...this.state.counters];
+    // get index of incremented counter
+    const index = counters.indexOf(counter);
+    // spread operator to clone the counter being incremented
+    counters[index] = {...counter};
+    // increment value
+    if (counters[index].value > 0) {
+      counters[index].value--;
+    }
+    this.setState({ counters });
+  };
+
   // handler for when the reset button at the top of the screen is clicked
   handleReset = () => {
     const counters = this.state.counters.map(c => {
@@ -62,6 +77,7 @@ class App extends Component {
             counters={this.state.counters}
             onReset={this.handleReset} 
             onIncrement={this.handleIncrement} 
+            onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}/>
         </main> 
       </React.Fragment>

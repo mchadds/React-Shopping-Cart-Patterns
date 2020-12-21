@@ -19,7 +19,7 @@ class Counter extends Component {
     return (
       <div>
         <span
-          style={{ marginRight: 2 + "em", marginLeft: 1 + "em" }}
+          style={{ marginRight: 2 + "em", marginLeft: 1 + "em", minWidth: 3 + "em" }}
           className={this.getBadgeClasses()}
         >
           {this.formatCount()}
@@ -27,9 +27,16 @@ class Counter extends Component {
         <button
         // pass reference of counter object cause it will make the implementation of the handler simpler
           onClick={() => this.props.onIncrement(this.props.counter)}
-          className="btn btn-secondary btn-sm"
+          className="btn btn-secondary btn-sm m-2"
         >
-          Increment
+          +
+        </button>
+        <button
+        // pass reference of counter object cause it will make the implementation of the handler simpler
+          onClick={() => this.props.onDecrement(this.props.counter)}
+          className="btn btn-secondary btn-sm m-2"
+        >
+          -
         </button>
         <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
       </div>
