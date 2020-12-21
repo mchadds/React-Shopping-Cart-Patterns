@@ -19,7 +19,7 @@ class Counter extends Component {
     return (
       <div>
         <span
-          style={{ marginRight: 2 + "em" }}
+          style={{ marginRight: 2 + "em", marginLeft: 1 + "em" }}
           className={this.getBadgeClasses()}
         >
           {this.formatCount()}
