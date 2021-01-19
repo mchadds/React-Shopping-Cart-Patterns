@@ -1,7 +1,7 @@
 # Shopping Cart Patterns Using React
 
 ## Description
-This project implements shopping cart patterns found on todays cutting edge websites.
+This project implements front end shopping cart patterns found on todays cutting edge websites.
 - Incrementing items in cart
 - Decrementing items in cart
 - Removing item type from cart
