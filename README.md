@@ -1,11 +1,5 @@
 # Shopping Cart Patterns Using React
 
-## Table of Contents
-- Description
-- Demo
-- Architecture
-- Tools
-
 ## Description
 This project implements real world shopping cart patterns including
 - Incrementing items in cart
